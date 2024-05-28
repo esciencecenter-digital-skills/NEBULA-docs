@@ -54,6 +54,29 @@ The `visibility` field should be `visible` if you want to make this specific mod
 Finally, the `id`, `author`, `trl` (technical readiness level) and `abstract` properties are currently not used, but they are still here for legacy reasons.
 
 ## The `info.md` file
+This file defines the learning objectives of your module and is generally the first chapter to appear on the main module's overview page. An example `info.md` file is shown below:
+```yaml
+---
+title: Learning objectives
+type: info
+order: 0
+---
+
+- Appreciate the importance of testing software
+- Understand the various benefits of testing
+- Understand the types of tests and what info they convey
+- Get familiar with the idea of continuous integration and its importance
+```
+
+Here, the `title` corresponds to the title of your chapter as shown in the module's overview page.
+
+Within a module, the `type` field defines the nature of the included chapter and assumes the following options:
+- `info`: for chapters containing general information material.
+- `presentation`: for chapters defining presentations; see example [here](#the-slides-pmd-file).
+- `reading`: for chapters containing focused reading material and on-line resources; see example [here](#exercises-and-online-resources-files).
+- `exercise`: for exercises; see example [here](#exercises-and-online-resources-files)
+
+Finally, the `order` field determines the sequence in which chapters appear on the module's overview page. Since the learning objectives are expected to come first, `order` should be set to `0` in the `info.md` file.
 
 ## The slides pmd file
 
