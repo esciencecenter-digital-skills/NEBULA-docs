@@ -3,7 +3,21 @@
 To add a module, create a new folder inside the main `modules` directory
 named after your new module, *e.g.*, my-new-module.
 
-This new `modules/my-new-module/` directory should contain the following files:
+This new `modules/my-new-module/` directory with general structure:
+
+```console
+my-new-module
+├── exercises.md
+├── online_resources.md
+├── index.md
+├── info.md
+├── media
+│   ├── fig1.jpeg
+│   └── fig2.png
+└── slides.pmd
+```
+
+should contain the following files:
 
 - [index.md](#the-indexmd-file)
 - [info.md](#the-infomd-file)
