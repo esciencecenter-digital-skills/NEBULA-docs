@@ -1,9 +1,9 @@
 # Directory structure and content tags
 
 To add a module, create a new folder inside the main `modules` directory
-named after your new module, *e.g.*, my-new-module.
+named after your new module, *e.g.*, `my-new-module`.
 
-This new `modules/my-new-module/` directory has general structure:
+This new `modules/my-new-module/` folder has the general structure:
 
 ```console
 my-new-module
@@ -18,7 +18,7 @@ my-new-module
 └── slides.pmd
 ```
 
-and should contain the following files:
+that should contain the following files:
 
 - [index.md](#the-indexmd-file)
 - [info.md](#the-infomd-file)
@@ -73,7 +73,7 @@ Here, the `title` corresponds to the title of your chapter as shown in the modul
 
 Within a module, the `type` field defines the chapter type and assumes the following options:
 - `info`: for chapters containing general information material.
-- `presentation`: for chapters defining presentations; see example [here](#the-slides-pmd-file).
+- `slides`: for chapters defining presentations; see example [here](#the-slides-pmd-file).
 - `reading`: for chapters containing focused reading material and on-line resources; see example [here](#exercises-and-online-resources-files).
 - `exercise`: for exercises; see example [here](#exercises-and-online-resources-files)
 
@@ -81,7 +81,7 @@ Finally, the `order` field determines the sequence in which chapters appear on t
 
 ## The slides pmd file
 
-Similar to `info.md`, the slides file is also embedded as a chapter on the module's main page, using the `presentation` chapter type, as described [above](#the-infomd-file).
+Similar to `info.md`, the slides file is also embedded as a chapter on the module's main page, using the `slides` chapter type, as described [above](#the-infomd-file).
 
 For now, they should be named with a different extension, `*.pmd`, to differentiate them from other chapter types.
 Like `info.md`, they also require an initial YAML heading, *e.g.*,
@@ -199,8 +199,7 @@ order: 2
 Software testing is the process of evaluating and verifying that software meet specified requirements...
 ```
 where it uses the `reading` chapter type as described [above](#the-infomd-file).
-
-In turn, an `exercise.md` chapter can assume the following format
+In turn, an `exercise.md` chapter can assume the following format:
 
 ```markdown
 ---
@@ -210,6 +209,7 @@ order: 3
 ---
 
 # Exercise 1
+
 ....
 ```
 
@@ -225,6 +225,7 @@ order: 4
 # Reading material
 
 ## Testing
+
 Follow the links below to read more about software testing.
 ....
 ```
