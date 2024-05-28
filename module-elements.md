@@ -1,4 +1,4 @@
-## Elements of a module
+# Elements of a module
 
 A module can contain the following elements:
 
@@ -9,7 +9,7 @@ A module can contain the following elements:
 
 Ideally, all modules contain all elements.
 
-### Slices
+## Slices
 Slides are essential when teaching a module in a classroom setting.
 They do not need to be long, however; a few slides to provide context and motivation is sufficient.
 
@@ -17,16 +17,16 @@ It is important to include notes, however brief, on ever slide.
 The notes are crucial for any instructor preparing to teach with the materials.
 They are also relevant for self-study participants, who can use the slides with accompanying notes to get a quick introduction to the subject.
 
-Slides are written in a markdown file, which should be placed in the `/modules/{modulename}` directory and rendered with Reveal.js. Technical information about the structure of these files [is here](#slides-with-revealjs).
+Slides are written in a markdown file, which should be placed in the `/modules/my-module-name/` directory and rendered with Reveal.js. Technical information about the structure of these files [is here](module-dir-structure.md#slides-with-revealjs).
 
-### Text
+## Text
 As this material is partly targeted at self-study participants, we explicitly want to include text.
 
 This type of section is meant to illustrate the concepts that are also covered in the presentations but for self study purpose. In the future we might replace many of these with recorded videos.
 
-Texts are written in markdown, as chapters inside the `/modules/{modulename}` directory.
+Texts are written in markdown, as chapters inside the `/modules/my-module-name/` directory.
 
-### Exercises
+## Exercises
 Any exercises are welcome, and there are no limits to the type of exercises that can be included.
 However, be explicit about the type of exercise at the top of the page:
 
@@ -43,9 +43,9 @@ If there are online resources that are relevant for the exercise, provide direct
 
 Finally, provide information on the expected outcome of the exercise.
 
-Exercises are written in markdown, as chapters inside the `/modules/{modulename}` directory.
+Exercises are written in markdown, as chapters inside the `/modules/my-module-name/` directory.
 
-### Online resources
+## Online resources
 The online resources are the meat of the modules.
 They provide the most detailed information to relevant content, and their collection should be comprehensive.
 
@@ -64,4 +64,4 @@ And optionally, consider adding:
 - Target audience or level of the resource (e.g. "technical resource, optional")
 - Discussion points for the classroom
 
-Online resources are written in markdown, as chapters inside the `/modules/{modulename}` directory.
+Online resources are written in markdown, as chapters inside the `/modules/my-module-name/` directory.
