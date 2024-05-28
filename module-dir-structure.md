@@ -56,7 +56,7 @@ Finally, the `id`, `author`, `trl` (technical readiness level) and `abstract` pr
 
 ## The `info.md` file
 This file defines the learning objectives of your module and is generally the first chapter to appear on the main module's overview page. An example `info.md` file is shown below:
-```yaml
+```markdown
 ---
 title: Learning objectives
 type: info
@@ -85,7 +85,7 @@ Similar to `info.md`, the slides file is also embedded as a chapter on the modul
 
 For now, they should be named with a different extension, `*.pmd`, to differentiate them from other chapter types.
 Like `info.md`, they also require an initial YAML heading, *e.g.*,
-```yaml
+```markdown
 ---
 title: Software Testing
 type: slides
@@ -184,6 +184,50 @@ info@esciencecenter.nl
 ```
 
 ## Text, exercises and online resources files
+These chapters are defined by simply Markdown `*.md` files with an initial YAML heading.
+
+An example `text.md` file is shown below:
+```markdown
+---
+title: Software Testing
+type: reading
+order: 2
+---
+
+## Software Testing (5 minutes)
+
+Software testing is the process of evaluating and verifying that software meet specified requirements...
+```
+where it uses the `reading` chapter type as described [above](#the-infomd-file).
+
+In turn, an `exercise.md` chapter can assume the following format
+
+```markdown
+---
+title: Exercise 1
+type: exercise
+order: 3
+---
+
+# Exercise 1
+....
+```
+
+while an online resources file is given by:
+
+```markdown
+---
+title: Reading material
+type: reading
+order: 4
+---
+
+# Reading material
+
+## Testing
+Follow the links below to read more about software testing.
+....
+```
 
 ## The `media` folder
 
