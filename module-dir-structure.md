@@ -9,6 +9,7 @@ This new `modules/my-new-module/` directory has general structure:
 my-new-module
 ├── exercises.md
 ├── online_resources.md
+├── text.md
 ├── index.md
 ├── info.md
 ├── media
@@ -22,7 +23,7 @@ and should contain the following files:
 - [index.md](#the-indexmd-file)
 - [info.md](#the-infomd-file)
 - [slides pmd file](#the-slides-pmd-file)
-- [exercises and online resources files](#exercises-and-online-resources-files)
+- [text, exercises and online resources files](#text-exercises-and-online-resources-files)
 - [the `media` folder](#the-media-folder)
 
 ## The `index.md` file
@@ -70,7 +71,7 @@ order: 0
 
 Here, the `title` corresponds to the title of your chapter as shown in the module's overview page.
 
-Within a module, the `type` field defines the nature of the included chapter and assumes the following options:
+Within a module, the `type` field defines the chapter type and assumes the following options:
 - `info`: for chapters containing general information material.
 - `presentation`: for chapters defining presentations; see example [here](#the-slides-pmd-file).
 - `reading`: for chapters containing focused reading material and on-line resources; see example [here](#exercises-and-online-resources-files).
@@ -80,7 +81,109 @@ Finally, the `order` field determines the sequence in which chapters appear on t
 
 ## The slides pmd file
 
-## Exercises and online resources files
+Similar to `info.md`, the slides file is also embedded as a chapter on the module's main page, using the `presentation` chapter type, as described [above](#the-infomd-file).
+
+For now, they should be named with a different extension, `*.pmd`, to differentiate them from other chapter types.
+Like `info.md`, they also require an initial YAML heading, *e.g.*,
+```yaml
+---
+title: Software Testing
+type: slides
+order: 1
+---
+
+---
+<!-- .slide: data-state="title" -->
+
+## Software Testing
+
+---
+...
+```
+
+Although the slides are written in Markdown, they are rendered using [Reveal.js](https://revealjs.com/), and for this reason, they follow a special format. This is discussed below.
+
+### Slide types
+
+There are four different slide types:
+
+- Title slide, `data-state="title"`
+- Default slide, `data-state="standard"`
+- "About us", `data-state="about"`
+- "Let's stay in touch", `data-state="keepintouch"`
+
+A slide is fenced by three dashes, and (optionally) an HTML comment that indicates the slide type:
+
+```markdown
+
+---
+
+<!-- .slide: data-state="standard" -->
+
+```
+
+Always keep an empty line before and after the slide fence.
+
+The dashes indicate the slide borders; the are therefore only necessary between the slides, and not at the beginning or end of a presentation.
+
+### Slide content
+
+Slide content can be written in Markdown.
+
+To keep slides clean, use single images per slide.
+Styling in Reveal is not trivial, and it is best to keep it simple.
+
+Images can be embedded using either markdown syntax:
+
+```markdown
+![Mapping the Via Appia](media/viaappia.png)
+```
+
+Or, for more customisation, using HTML:
+
+```html
+<center>
+<img src="media/researchcycle.png" width="60%">
+</center>
+```
+
+### Slide notes
+
+Notes should be added at the bottom of the slide, as follows:
+
+```markdown
+
+Note:
+Here is the text of a note.
+
+---
+```
+
+where the `---` indicates the fence to the following slide.
+
+### Final slide
+
+The final slide should provide the contact information for the eScience Center.
+This is not hardcoded into the slides, so it should be provided explicitly.
+
+The code for the final slide is as follows:
+
+```markdown
+
+---
+
+<!-- .slide: data-state="keepintouch" -->
+
+
+www.esciencecenter.nl
+
+info@esciencecenter.nl
+
+020 - 460 47 70
+
+```
+
+## Text, exercises and online resources files
 
 ## The `media` folder
 
