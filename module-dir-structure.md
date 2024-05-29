@@ -3,7 +3,7 @@
 To add a module, create a new folder inside the main `modules` directory
 named after your new module, *e.g.*, `my-new-module`.
 
-This new `modules/my-new-module/` folder has the general structure:
+This new `modules/my-new-module/` folder should be organized according to the following general structure:
 
 ```console
 my-new-module
@@ -18,7 +18,7 @@ my-new-module
 └── slides.pmd
 ```
 
-that should contain the following files:
+The important files in this folder include:
 
 - [index.md](#the-indexmd-file)
 - [info.md](#the-infomd-file)
@@ -27,12 +27,12 @@ that should contain the following files:
 - [the `media` folder](#the-media-folder)
 
 ## The `index.md` file
-This file is entirely defined by a YAML header.
+This file represents the core of your module and is entirely defined by a YAML header.
 An example `index.md` file is given below:
 
 ```yaml
 ---
-id: 1
+id: 0
 trl: medium
 category: Development
 title: Software Testing
@@ -42,17 +42,17 @@ thumbnail: "thumbnail-testing.jpg"
 visibility: visible
 ---
 ```
-The only important fields at this point are `category`, `title`, `thumbnail`, and `visibility`.
+The `category` field should match one of the categories defined in the `config.json` file (`"categoryOrder"` field), which is located in the content's repo root directory; see, *e.g.*, [here](https://github.com/esciencecenter-digital-skills/NEBULA-content-template/blob/main/config.json). These categories are essentially sections that group together modules within specific thematic areas.
 
-The `category` field should be one of the categories defined in the `config.json` file which is located in the root directory. These are literally `sections` that group together modules within certain categories.
+The `id` field is used to determine the position of the current module within the specified `category`.
 
 The `title` field should be the title of the module; it will be shown on the main overview page.
 
 The `thumbnail` field should be the name of the thumbnail image, which should be placed in the `/modules/my-new-module/media` directory. This image shows up on the index page. You can add your own image to `/modules/my-new-module/media` and replace `thumbnail: "nlesc-dummy.png"` by `thumbnail: "my-module-thumbnail-image.png"`.
 
-The `visibility` field should be `visible` if you want to make this specific module visible in the final lesson rendering.  
+The `visibility` field should be set to `visible` if you want to make this specific module visible in the final lesson rendering. Otherwise, set it to, *e.g.*, `not visible`.
 
-Finally, the `id`, `author`, `trl` (technical readiness level) and `abstract` properties are currently not used, but they are still here for legacy reasons.
+Finally, the `author`, `trl` (technical readiness level) and `abstract` fields do not influence the final module rendering, but they can be very useful for internal control and for developers.
 
 ## The `info.md` file
 This file defines the learning objectives of your module and is generally the first chapter to appear on the main module's overview page. An example `info.md` file is shown below:
