@@ -1,6 +1,6 @@
 # Serving the site locally
 
-## Set the path of your content folder
+## 1. Set the path of your content folder
 
 The first step to rendering your content folder with `NEBULA` is to set the `CONTENT_PATH` environment variable to the path of your content repository, *i.e.*,
 
@@ -8,7 +8,7 @@ The first step to rendering your content folder with `NEBULA` is to set the `CON
 export CONTENT_PATH="path-to-your-content-repository"
 ```
 
-## Setup `npm`
+## 2. Setup `npm`
 
 Now, assuming that you have `npm` installed (the default Node Package Manager for the JavaScript runtime environment Node.js), run the following command inside the `NEBULA`'s root directory:
 
@@ -16,7 +16,7 @@ Now, assuming that you have `npm` installed (the default Node Package Manager fo
 npm install
 ```
 
-## Development Server
+## 3. Start the development server
 
 Start the development server by running:
 
