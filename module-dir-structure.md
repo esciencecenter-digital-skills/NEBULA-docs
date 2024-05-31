@@ -7,15 +7,10 @@ This new `modules/my-new-module/` folder should be organized according to the fo
 
 ```console
 my-new-module
-├── exercises.md
-├── online_resources.md
-├── text.md
 ├── index.md
 ├── info.md
 ├── media
-│   ├── fig1.jpeg
-│   └── fig2.png
-└── slides.md
+└── some-other-content.md
 ```
 
 The important files in this folder include:
