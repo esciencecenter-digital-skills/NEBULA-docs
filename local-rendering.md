@@ -1,16 +1,27 @@
 # Serving the site locally
 
-## 1. Set the path of your content folder
+## 1. Install `npm`
+`npm` is the default Node Package Manager for the JavaScript runtime environment Node.js.
+To see if you already have `Node.js` and `npm` installed, run the following:
 
-The first step to rendering your content folder with `NEBULA` is to set the `CONTENT_PATH` environment variable to the path of your content repository (see the documentation on [setting up a content repository](https://github.com/esciencecenter-digital-skills/NEBULA-docs/blob/main/content-repo-instantiation.md)), *i.e.*,
+```bash
+node -v
+npm -v
+```
+
+The above commands should output the installed versions, *e.g.*, `10.6.0` and `v20.9.0`. If not, check the [download instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+## 2. Set the path of your content folder
+
+The next step to rendering your content folder with `NEBULA` is to set the `CONTENT_PATH` environment variable to the path of your content repository (see the documentation on [setting up a content repository](https://github.com/esciencecenter-digital-skills/NEBULA-docs/blob/main/content-repo-instantiation.md)), *i.e.*,
 
 ```bash
 export CONTENT_PATH="path-to-your-content-repository"
 ```
 
-## 2. Setup `npm`
+## 3. Setup `npm`
 
-Now, assuming that you have `npm` installed (the default Node Package Manager for the JavaScript runtime environment Node.js), run the following command inside the `NEBULA`'s root directory:
+Now, assuming that you have `npm` installed, run the following command inside the `NEBULA`'s root directory:
 
 ```bash
 npm install
@@ -18,7 +29,7 @@ npm install
 
 Among other things, this command will install all the dependencies listed in the `package.json` file required for your `NEBULA` to run.
 
-## 3. Start the development server
+## 4. Start the development server
 
 Start the development server by running:
 
