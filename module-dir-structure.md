@@ -15,14 +15,14 @@ my-new-module
 ├── media
 │   ├── fig1.jpeg
 │   └── fig2.png
-└── slides.pmd
+└── slides.md
 ```
 
 The important files in this folder include:
 
 - [index.md](#the-indexmd-file)
 - [info.md](#the-infomd-file)
-- [slides pmd file](#the-slides-pmd-file)
+- [slides file](#the-slides-file)
 - [text, exercises and online resources files](#text-exercises-and-online-resources-files)
 - [the `media` folder](#the-media-folder)
 
@@ -73,17 +73,16 @@ Here, the `title` corresponds to the title of your chapter as shown in the modul
 
 Within a module, the `type` field defines the chapter type and assumes the following options:
 - `info`: for chapters containing general information material.
-- `slides`: for chapters defining presentations; see example [here](#the-slides-pmd-file).
+- `slides`: for chapters defining presentations; see example [here](#the-slides-file).
 - `reading`: for chapters containing focused reading material and on-line resources; see example [here](#exercises-and-online-resources-files).
 - `exercise`: for exercises; see example [here](#exercises-and-online-resources-files)
 
 Finally, the `order` field determines the sequence in which chapters appear on the module's overview page. Since the learning objectives are expected to come first, `order` should be set to `0` in the `info.md` file.
 
-## The slides pmd file
+## The slides file
 
 Similar to `info.md`, the slides file is also embedded as a chapter on the module's main page, using the `slides` chapter type, as described [above](#the-infomd-file).
 
-For now, they should be named with a different extension, `*.pmd`, to differentiate them from other chapter types.
 Like `info.md`, they also require an initial YAML heading, *e.g.*,
 ```markdown
 ---
@@ -92,7 +91,6 @@ type: slides
 order: 1
 ---
 
----
 <!-- .slide: data-state="title" -->
 
 ## Software Testing
