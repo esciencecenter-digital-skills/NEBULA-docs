@@ -38,17 +38,17 @@ thumbnail: "thumbnail-testing.jpg"
 visibility: visible
 ---
 ```
-The `category` field should match one of the categories defined in the `config.json` file (`"categoryOrder"` field), which is located in the content's repo root directory; see, *e.g.*, [here](https://github.com/esciencecenter-digital-skills/NEBULA-content-template/blob/main/config.json). These categories are essentially sections that group together modules within specific thematic areas.
+- The `category` field should match one of the categories defined in the `config.json` file (`"categoryOrder"` field), which is located in the content's repo root directory; see, *e.g.*, [here](https://github.com/esciencecenter-digital-skills/NEBULA-content-template/blob/main/config.json). These categories are essentially sections that group together modules within specific thematic areas.
 
-The `id` field is used to determine the position of the current module within the specified `category`.
+- The `id` field is used to determine the position of the current module within the specified `category`.
 
-The `title` field should be the title of the module; it will be shown on the main overview page.
+- The `title` field should be the title of the module; it will be shown on the main overview page.
 
-The `thumbnail` field should be the name of the thumbnail image, which should be placed in the `/modules/my-new-module/media` directory. This image shows up on the index page. You can add your own image to `/modules/my-new-module/media` and replace `thumbnail: "nlesc-dummy.png"` by `thumbnail: "my-module-thumbnail-image.png"`.
+- The `thumbnail` field should be the name of the thumbnail image, which should be placed in the `/modules/my-new-module/media` directory. This image shows up on the index page. You can add your own image to `/modules/my-new-module/media` and replace `thumbnail: "nlesc-dummy.png"` by `thumbnail: "my-module-thumbnail-image.png"`.
 
-The `visibility` field should be set to `visible` if you want to make this specific module visible in the final lesson rendering. Otherwise, set it to, *e.g.*, `not visible`.
+- The `visibility` field should be set to `visible` if you want to make this specific module visible in the final lesson rendering. Otherwise, set it to, *e.g.*, `not visible`.
 
-The `author` and `abstract` fields do not influence the final module rendering, but they can be useful for internal control and for developers.
+- The `author` and `abstract` fields do not influence the final module rendering, but they can be useful for internal control and for developers.
 
 ## The `info.md` file
 This file defines the learning objectives of your module and is generally the first chapter to appear on the main module's overview page. An example `info.md` file is shown below:
@@ -79,6 +79,12 @@ Finally, the `order` field determines the sequence in which chapters appear on t
 
 The `media` folder gathers any media used in your module, including presentation images, videos, and module's thumbnail image. The thumbnail image is mandatory, as it is required by the `thumbnail` field in `index.md`.
 
+To include any media in your `md` files, use, for example, `media/my-image.png` as shown below using markdown syntax:
+```markdown
+![Some text](media/my-image.png)
+```
+For further information, see [below](#slide-content).
+
 ## The slides file
 
 Similar to `info.md`, the slides file is also embedded as a chapter on the module's main page, using the `slides` chapter type, as described [above](#the-infomd-file).
@@ -99,7 +105,7 @@ order: 1
 ...
 ```
 
-> ``📝`` **Is your first slide not rendering correctly?** Make sure that your YAML heading is included and formatted according to the example above. Pay special attention to the proper placement of the `---` separator.
+> 📌 **Is your first slide not rendering correctly?** Make sure that your YAML heading is included and formatted according to the example above. Pay special attention to the proper placement of the `---` separator.
 
 Although the slides are written in Markdown, they are rendered using [Reveal.js](https://revealjs.com/), and for this reason, they follow a special format. This is discussed below.
 
