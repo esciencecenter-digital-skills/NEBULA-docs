@@ -14,7 +14,7 @@ A content directory/repository has a few default files:
 - CONTRIBUTING.md: Explanation on how others can contribute to the content
 - config.json: The configuration file which defines its name/title, styling, organization and categories.
 
-The `.github` directory holds the workflow files that are necessary to serve the platform on github pages, as well as additional tests and checks. All content lives in the `modules` directory. 
+The `.github` directory holds the workflow files that are necessary to serve the platform on github pages, as well as additional tests and checks. All content lives in the `modules` directory.
 
-Most modules are already set up: they contain a `{modulename}.md` file, as well as a `_modulename/` directory.
-If your module is not yet set up, please create both these inside the `modules` directory.
+Most modules are already set up: they contain the `index.md`, `info.md` and other content files, in addition to a `media/` directory. For further details, see [here](module-dir-structure.md).
+If your module is not yet set up, please create both these inside the `modules` directory and follow [these instructions](module-dir-structure.md).
