@@ -99,6 +99,8 @@ order: 1
 ...
 ```
 
+> ``📝`` **Is your first slide not rendering correctly?** Make sure that your YAML heading is included and formatted according to the example above. Pay special attention to the proper placement of the `---` separator.
+
 Although the slides are written in Markdown, they are rendered using [Reveal.js](https://revealjs.com/), and for this reason, they follow a special format. This is discussed below.
 
 ### Slide types
