@@ -2,7 +2,7 @@
 
 ## 1. Install `npm`
 `npm` is the default Node Package Manager for the JavaScript runtime environment Node.js.
-To see if you already have `Node.js` and `npm` installed, run the following:
+To see if you already have `Node.js` and `npm` installed, open a command line and run the following:
 
 ```bash
 node -v
@@ -13,7 +13,7 @@ The above commands should output the installed versions, *e.g.*, `10.6.0` and `v
 
 ## 2. Set the path of your content folder
 
-The next step to rendering your content folder with `NEBULA` is to set the `CONTENT_PATH` environment variable to the path of your content repository (see the documentation on [setting up a content repository](content-repo-instantiation.md)), *i.e.*,
+The next step is to set the `CONTENT_PATH` environment variable to the path of your content repository (see the documentation on [setting up a content repository](content-repo-instantiation.md)), *i.e.*,
 
 ```bash
 export CONTENT_PATH="path-to-your-content-repository"
