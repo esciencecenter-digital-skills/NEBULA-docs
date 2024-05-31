@@ -2,7 +2,7 @@
 
 ## 1. Set the path of your content folder
 
-The first step to rendering your content folder with `NEBULA` is to set the `CONTENT_PATH` environment variable to the path of your content repository, *i.e.*,
+The first step to rendering your content folder with `NEBULA` is to set the `CONTENT_PATH` environment variable to the path of your content repository (see the documentation on [setting up a content repository](https://github.com/esciencecenter-digital-skills/NEBULA-docs/blob/main/content-repo-instantiation.md)), *i.e.*,
 
 ```bash
 export CONTENT_PATH="path-to-your-content-repository"
