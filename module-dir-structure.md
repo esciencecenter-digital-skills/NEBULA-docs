@@ -28,7 +28,6 @@ An example `index.md` file is given below:
 ```yaml
 ---
 id: 0
-trl: medium
 category: Development
 title: Software Testing
 abstract: Local testing of your software and using Continuous Integration and Continuous Deployment (CI/CD)
@@ -47,7 +46,7 @@ The `thumbnail` field should be the name of the thumbnail image, which should be
 
 The `visibility` field should be set to `visible` if you want to make this specific module visible in the final lesson rendering. Otherwise, set it to, *e.g.*, `not visible`.
 
-Finally, the `author`, `trl` (technical readiness level) and `abstract` fields do not influence the final module rendering, but they can be very useful for internal control and for developers.
+The `author` and `abstract` fields do not influence the final module rendering, but they can be useful for internal control and for developers.
 
 ## The `info.md` file
 This file defines the learning objectives of your module and is generally the first chapter to appear on the main module's overview page. An example `info.md` file is shown below:
