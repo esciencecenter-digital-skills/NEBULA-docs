@@ -101,7 +101,7 @@ order: 1
 
 ## Software Testing
 
----
+===
 ...
 ```
 
@@ -122,7 +122,7 @@ A slide is fenced by three dashes, and (optionally) an HTML comment that indicat
 
 ```markdown
 
----
+===
 
 <!-- .slide: data-state="standard" -->
 
@@ -162,10 +162,10 @@ Notes should be added at the bottom of the slide, as follows:
 Note:
 Here is the text of a note.
 
----
+===
 ```
 
-where the `---` indicates the fence to the following slide.
+where the `===` indicates the fence to the following slide.
 
 ### Final slide
 
@@ -176,7 +176,7 @@ The code for the final slide is as follows:
 
 ```markdown
 
----
+===
 
 <!-- .slide: data-state="keepintouch" -->
 
