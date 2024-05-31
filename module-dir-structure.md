@@ -15,11 +15,11 @@ my-new-module
 
 The important files in this folder include:
 
-- [index.md](#the-indexmd-file)
-- [info.md](#the-infomd-file)
-- [slides file](#the-slides-file)
-- [text, exercises and online resources files](#text-exercises-and-online-resources-files)
-- [the `media` folder](#the-media-folder)
+- [index.md](#the-indexmd-file) - required
+- [info.md](#the-infomd-file) - required
+- [the `media` folder](#the-media-folder) - required
+- [slides file](#the-slides-file) - optional
+- [text, exercises and online resources files](#text-exercises-and-online-resources-files) - optional
 
 ## The `index.md` file
 This file represents the core of your module and is entirely defined by a YAML header.
@@ -73,6 +73,10 @@ Within a module, the `type` field defines the chapter type and assumes the follo
 - `exercise`: for exercises; see example [here](#exercises-and-online-resources-files)
 
 Finally, the `order` field determines the sequence in which chapters appear on the module's overview page. Since the learning objectives are expected to come first, `order` should be set to `0` in the `info.md` file.
+
+## The `media` folder
+
+The `media` folder gathers any media used in your module, including presentation images, videos, and module's thumbnail image. The thumbnail image is mandatory, as it is required by the `thumbnail` field in `index.md`.
 
 ## The slides file
 
@@ -224,8 +228,4 @@ order: 4
 Follow the links below to read more about software testing.
 ....
 ```
-
-## The `media` folder
-
-The `media` folder gathers any media used in your module, including presentation images, videos, and module's thumbnail image.
 
