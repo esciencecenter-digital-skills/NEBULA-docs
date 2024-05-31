@@ -118,7 +118,7 @@ There are four different slide types:
 - "About us", `data-state="about"`
 - "Let's stay in touch", `data-state="keepintouch"`
 
-A slide is fenced by three dashes, and (optionally) an HTML comment that indicates the slide type:
+A slide is fenced by three equals sign separator, and (optionally) an HTML comment that indicates the slide type:
 
 ```markdown
 
