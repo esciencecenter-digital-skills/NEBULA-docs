@@ -15,11 +15,13 @@ my-new-module
 
 The important files in this folder include:
 
-- [index.md](#the-indexmd-file) - required
-- [info.md](#the-infomd-file) - required
-- [the `media` folder](#the-media-folder) - required
-- [slides file](#the-slides-file) - optional
-- [text, exercises and online resources files](#text-exercises-and-online-resources-files) - optional
+- [index.md](#the-indexmd-file)\*
+- [info.md](#the-infomd-file)\*
+- [the `media` folder](#the-media-folder)\*
+- [slides file](#the-slides-file)
+- [additional files: text, exercises and online resources](#text-exercises-and-online-resources)
+
+\* = required files.
 
 ## The `index.md` file
 This file represents the core of your module and is entirely defined by a YAML header.
@@ -181,10 +183,11 @@ info@esciencecenter.nl
 
 ```
 
-## Text, exercises and online resources files
+## Text, exercises and online resources
 These chapters are defined by simply Markdown `*.md` files with an initial YAML heading.
 
-An example `text.md` file is shown below:
+As discussed [before](module-elements.md), a text chapter is intended to cover the same content as in the slides but in a descriptive and readable way, potentially with a time indication. An example is shown below:
+
 ```markdown
 ---
 title: Software Testing
@@ -196,8 +199,9 @@ order: 2
 
 Software testing is the process of evaluating and verifying that software meet specified requirements...
 ```
-where it uses the `reading` chapter type as described [above](#the-infomd-file).
-In turn, an `exercise.md` chapter can assume the following format:
+It uses the `reading` chapter type as described [above](#the-infomd-file) and is the defined as the third chapter of the module (`order: 2`).
+
+In turn, an exercise can be defined as follows:
 
 ```markdown
 ---
@@ -206,21 +210,28 @@ type: exercise
 order: 3
 ---
 
-# Exercise 1
+## Scenario
 
-....
+You are part of a research team working on....
+
+---
+
+## Question
+
+Which of the following best describes...
 ```
+where the chapter type `exercise` is now explicitly used.
 
-while an online resources file is given by:
+Finally, a chapter with online resources, providing in-depth material about the chapter's content, is also of the `reading` type. An example file would be:
 
 ```markdown
 ---
-title: Reading material
+title: Further reading
 type: reading
 order: 4
 ---
 
-# Reading material
+# Further reading
 
 ## Testing
 
